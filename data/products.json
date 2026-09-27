@@ -1,0 +1,137 @@
+[
+  {
+    "id": "p-gen-01",
+    "slug": "generator-01",
+    "title": "Generator · 01",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-01.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-gen-02",
+    "slug": "generator-02",
+    "title": "Generator · 02",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-02.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-gen-03",
+    "slug": "generator-03",
+    "title": "Generator · 03",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-03.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-gen-04",
+    "slug": "generator-04",
+    "title": "Generator · 04",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-04.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-gen-05",
+    "slug": "generator-05",
+    "title": "Generator · 05",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-05.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-gen-06",
+    "slug": "generator-06",
+    "title": "Generator · 06",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-generators",
+    "images": [
+      "/images/client/generator-06.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-stab-01",
+    "slug": "stabilizator-01",
+    "title": "Stabilizator · 01",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-stabilizers",
+    "images": [
+      "/images/client/stabilizer-02.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-stab-02",
+    "slug": "stabilizator-02",
+    "title": "Stabilizator · 02",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-stabilizers",
+    "images": [
+      "/images/client/stabilizer-03.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "p-stab-03",
+    "slug": "stabilizator-03",
+    "title": "Stabilizator · 03",
+    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
+    "price": null,
+    "category": "c-stabilizers",
+    "images": [
+      "/images/client/stabilizer-06.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  }
+]

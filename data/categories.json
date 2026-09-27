@@ -1,0 +1,30 @@
+[
+  {
+    "id": "c-generators",
+    "slug": "generatorlar",
+    "name": "Generatorlar",
+    "description": "",
+    "status": "active"
+  },
+  {
+    "id": "c-stabilizers",
+    "slug": "stabilizatorlar",
+    "name": "Stabilizatorlar",
+    "description": "",
+    "status": "active"
+  },
+  {
+    "id": "c-regulators",
+    "slug": "tenzimleyiciler",
+    "name": "Tənzimləyicilər",
+    "description": "",
+    "status": "active"
+  },
+  {
+    "id": "c-other",
+    "slug": "diger",
+    "name": "Digər",
+    "description": "",
+    "status": "active"
+  }
+]

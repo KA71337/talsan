@@ -1,0 +1,62 @@
+[
+  {
+    "id": "s-generator-sale",
+    "slug": "generator-satisi",
+    "title": "Generator satışı",
+    "summary": "Generatorların satışı və tələbatınıza uyğun avadanlığın seçilməsində məsləhət.",
+    "description": "Generator seçərkən istifadə məqsədi və qoşulacaq yük önəmlidir. Tələbatınızı bildirin — uyğun variantlar barədə məlumat verək.",
+    "icon": "generator",
+    "image": "/images/client/generator-06.webp",
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "s-stabilizer-sale",
+    "slug": "stabilizator-satisi",
+    "title": "Stabilizator satışı",
+    "summary": "Gərginlik stabilizatorlarının satışı və seçimdə texniki məsləhət.",
+    "description": "Stabilizator avadanlığı gərginlik dəyişmələrindən qorumaq üçün istifadə olunur. Qoşulacaq avadanlıq barədə məlumat verin — uyğun variantı birlikdə müəyyən edək.",
+    "icon": "stabilizer",
+    "image": "/images/client/stabilizer-01.webp",
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "s-stabilizer-repair",
+    "slug": "stabilizator-temiri",
+    "title": "Stabilizator təmiri",
+    "summary": "Nasaz stabilizatorların yoxlanılması və təmiri.",
+    "description": "Avadanlığın modeli və nasazlığın təsviri ilə müraciət edin. Təmir imkanı və şərtlər əlaqə zamanı dəqiqləşdirilir.",
+    "icon": "repair",
+    "image": "/images/client/stabilizer-05.webp",
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "s-regulator",
+    "slug": "tenzimleyici-satisi-ve-temiri",
+    "title": "Tənzimləyici satışı və təmiri",
+    "summary": "Tənzimləyicilərin (regulyatorların) satışı və təmiri.",
+    "description": "Tənzimləyici (regulyator) avadanlığının satışı və təmiri. Model və tələbat barədə məlumat göndərin — imkanlar əlaqə zamanı dəqiqləşdirilir.",
+    "icon": "regulator",
+    "image": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  },
+  {
+    "id": "s-consulting",
+    "slug": "texniki-konsultasiya",
+    "title": "Texniki konsultasiya",
+    "summary": "Avadanlığın seçimi və istismarı ilə bağlı məsləhət.",
+    "description": "Hansı avadanlığın sizə uyğun olduğunu bilmirsinizsə, tələbatınızı yazın — seçimdə köməklik göstərək.",
+    "icon": "consult",
+    "image": null,
+    "status": "active",
+    "createdAt": "2026-09-24T00:00:00.000Z",
+    "updatedAt": "2026-09-24T00:00:00.000Z"
+  }
+]
