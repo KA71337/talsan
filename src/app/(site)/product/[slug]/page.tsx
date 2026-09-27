@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CURRENCY, siteUrl } from "@/config/site";
+import { absoluteUrl, CURRENCY } from "@/config/site";
 import { Icon } from "@/components/Icon";
 import { ProductCard } from "@/components/site/Cards";
 import { Gallery } from "@/components/site/Gallery";
@@ -9,6 +9,7 @@ import { PageHead } from "@/components/site/PageHead";
 import { getCategories, getProductBySlug, getProducts, getSettings } from "@/lib/content";
 import { formatPrice, telHref, whatsappHref } from "@/lib/format";
 import { jsonLd } from "@/lib/jsonld";
+import { ORG_ID, pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,18 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const p = await getProductBySlug(slug);
   if (!p) return {};
-  const description = p.description.slice(0, 160) || undefined;
-  return {
-    title: p.title,
-    description,
-    alternates: { canonical: `/product/${p.slug}` },
-    openGraph: {
-      title: p.title,
-      description,
-      url: `/product/${p.slug}`,
-      images: p.images[0] ? [{ url: p.images[0] }] : undefined,
-    },
-  };
+  const s = await getSettings();
+  const description = p.description.slice(0, 160) || s.texts.catalogText;
+  return pageMeta({ title: p.title, description, path: `/product/${p.slug}`, image: p.images[0], settings: s });
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -56,7 +48,8 @@ export default async function ProductPage({ params }: Props) {
     "@type": "Product",
     name: product.title,
     description: product.description || undefined,
-    image: product.images.map((i) => `${siteUrl()}${i}`),
+    image: product.images.map((i) => absoluteUrl(i)),
+    url: absoluteUrl(`/product/${product.slug}`),
     category: category?.name,
     ...(product.price !== null
       ? {
@@ -64,7 +57,8 @@ export default async function ProductPage({ params }: Props) {
             "@type": "Offer",
             price: product.price,
             priceCurrency: CURRENCY,
-            url: `${siteUrl()}/product/${product.slug}`,
+            url: absoluteUrl(`/product/${product.slug}`),
+            seller: { "@id": ORG_ID },
             ...(product.stock !== null
               ? { availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock" }
               : {}),

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { Logo } from "@/components/Logo";
 import { authConfigError, SESSION_COOKIE, verifySession } from "@/lib/auth";
 import { LoginForm } from "./LoginForm";
 
@@ -17,6 +18,7 @@ export default async function LoginPage({ searchParams }: Props) {
   if (await verifySession((await cookies()).get(SESSION_COOKIE)?.value)) redirect(next);
   return (
     <main className="login">
+      <Logo className="login__logo" priority sizes="180px" />
       <div className="login__box">
         <div style={{ display: "grid", gap: 8 }}>
           <span className="eyebrow">İdarəetmə paneli</span>

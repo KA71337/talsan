@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { NAV } from "@/config/site";
+import { Logo } from "@/components/Logo";
+import { BRAND_NAME, NAV } from "@/config/site";
 import { contactChannels, SOCIAL_LABELS } from "@/lib/format";
 import type { Service, Settings } from "@/lib/types";
 
@@ -13,10 +14,9 @@ export function Footer({ settings, services }: { settings: Settings; services: S
     <footer className="footer">
       <div className="container footer__grid">
         <div className="footer__about">
-          <div className="brand">
-            <span className="brand__name">{settings.brand.name}</span>
-            {settings.brand.tagline && <span className="brand__tag">{settings.brand.tagline}</span>}
-          </div>
+          <Link href="/" className="brand" aria-label={`${BRAND_NAME} — ana səhifə`}>
+            <Logo className="footer__logo" sizes="200px" />
+          </Link>
           <p>{settings.seo.description}</p>
           {socials.length > 0 && (
             <div className="socials">
@@ -81,7 +81,7 @@ export function Footer({ settings, services }: { settings: Settings; services: S
       </div>
       <div className="container footer__bottom">
         <span>
-          © {year} {settings.brand.name}
+          © {year} {BRAND_NAME}
         </span>
         <span>Bütün hüquqlar qorunur</span>
       </div>

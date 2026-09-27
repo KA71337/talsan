@@ -4,15 +4,11 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { PageHead } from "@/components/site/PageHead";
 import { getProductBySlug, getServices, getSettings } from "@/lib/content";
 import { contactChannels, digits, SOCIAL_LABELS } from "@/lib/format";
+import { pageMeta } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const s = await getSettings();
-  return {
-    title: "Əlaqə",
-    description: s.texts.contactText,
-    alternates: { canonical: "/contacts" },
-    openGraph: { title: "Əlaqə", description: s.texts.contactText, url: "/contacts" },
-  };
+  return pageMeta({ title: "Əlaqə", description: s.texts.contactText, path: "/contacts", settings: s });
 }
 
 type Props = { searchParams: Promise<{ xidmet?: string; mehsul?: string }> };

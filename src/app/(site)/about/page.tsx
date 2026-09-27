@@ -5,16 +5,12 @@ import { SafeImage } from "@/components/SafeImage";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageHead } from "@/components/site/PageHead";
 import { getServices, getSettings } from "@/lib/content";
+import { pageMeta } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const s = await getSettings();
   const description = s.texts.aboutText.split("\n")[0].slice(0, 160);
-  return {
-    title: "Haqqımızda",
-    description,
-    alternates: { canonical: "/about" },
-    openGraph: { title: "Haqqımızda", description, url: "/about" },
-  };
+  return pageMeta({ title: "Haqqımızda", description, path: "/about", settings: s });
 }
 
 export default async function AboutPage() {

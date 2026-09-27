@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/Icon";
+import { Logo } from "@/components/Logo";
 
 const NAV = [
   { href: "/admin", label: "İdarəetmə paneli", icon: "other" as const },
@@ -18,7 +19,7 @@ const NAV = [
   { href: "/admin/settings", label: "Parametrlər", icon: "regulator" as const },
 ];
 
-export function AdminShell({ brand, children }: { brand: string; children: React.ReactNode }) {
+export function AdminShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [menu, setMenu] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -36,14 +37,14 @@ export function AdminShell({ brand, children }: { brand: string; children: React
   return (
     <div className="adm" data-menu={menu}>
       <div className="adm-top">
-        <strong>{brand}</strong>
+        <Logo className="adm-top__logo" sizes="80px" />
         <button type="button" onClick={() => setMenu((v) => !v)} aria-expanded={menu}>
           {menu ? "Bağla" : "Menyu"}
         </button>
       </div>
       <aside className="adm-side">
         <div className="adm-side__brand">
-          <strong>{brand}</strong>
+          <Logo className="adm-side__logo" sizes="120px" />
           <span>İdarəetmə paneli</span>
         </div>
         <nav className="adm-nav" aria-label="Admin menyu">

@@ -38,7 +38,8 @@
   --container: 1240px;
   --gutter: clamp(16px, 4vw, 32px);
   --section: clamp(64px, 8vw, 112px);
-  --header-h: 72px;
+  --header-h: 80px;
+  --logo-h: 60px;
 
   --shadow-sm: 0 1px 2px rgba(14, 16, 18, 0.06);
   --shadow: 0 12px 32px -16px rgba(14, 16, 18, 0.22);
@@ -296,6 +297,7 @@ p {
   background: var(--ink-950);
   color: var(--steel-300);
   font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .topbar__inner {
   display: flex;
@@ -330,16 +332,18 @@ p {
   color: var(--steel-400);
 }
 
+/* Header is dark: the TalSan logo has white lettering and sits directly on this surface. */
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid var(--line);
+  background: var(--ink-950);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--white);
   transition: box-shadow 0.25s var(--ease);
 }
 .header[data-scrolled="true"] {
-  box-shadow: 0 6px 24px -18px rgba(14, 16, 18, 0.35);
+  box-shadow: 0 10px 28px -18px rgba(0, 0, 0, 0.7);
 }
 .header__inner {
   display: flex;
@@ -348,29 +352,23 @@ p {
   height: var(--header-h);
 }
 .brand {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
 }
-.brand__name {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Logo: fixed height, width follows the original aspect ratio (never squeezed). */
+.logo {
+  display: block;
+  width: auto;
+  max-width: none;
+  flex: none;
 }
-.brand__tag {
-  margin-top: 4px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.brand__logo {
+  height: var(--logo-h);
+  transition: opacity 0.2s var(--ease);
+}
+.brand:hover .brand__logo {
+  opacity: 0.9;
 }
 .nav {
   display: flex;
@@ -389,7 +387,7 @@ p {
   padding: 0 14px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--steel-600);
+  color: var(--steel-300);
   position: relative;
   transition: color 0.2s;
 }
@@ -412,7 +410,7 @@ p {
 }
 .nav__link:hover,
 .nav__link[aria-current="page"] {
-  color: var(--ink-900);
+  color: var(--white);
 }
 .nav__link[aria-current="page"]::after,
 .nav__item:hover > .nav__link::after {
@@ -480,18 +478,23 @@ p {
   margin-left: auto;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line);
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
-  background: var(--white);
+  background: transparent;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.2s;
+}
+.burger:hover {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .burger span {
   position: relative;
   width: 18px;
   height: 2px;
-  background: var(--ink-900);
+  background: var(--white);
   transition: background-color 0.2s;
 }
 .burger span::before,
@@ -501,7 +504,7 @@ p {
   left: 0;
   width: 18px;
   height: 2px;
-  background: var(--ink-900);
+  background: var(--white);
   transition: transform 0.25s var(--ease);
 }
 .burger span::before {
@@ -535,8 +538,9 @@ p {
     display: block;
     position: fixed;
     inset: var(--mobile-top, 110px) 0 0 0;
-    background: var(--white);
-    border-top: 1px solid var(--line);
+    background: var(--ink-950);
+    color: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     overflow-y: auto;
     padding: 8px var(--gutter) 32px;
     opacity: 0;
@@ -555,7 +559,7 @@ p {
     align-items: center;
     justify-content: space-between;
     min-height: 56px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 17px;
     font-weight: 500;
     cursor: pointer;
@@ -574,17 +578,17 @@ p {
   }
   .mobile-nav__sub {
     padding: 6px 0 10px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   .mobile-nav__sub a {
     display: block;
     padding: 10px 0 10px 14px;
-    color: var(--steel-600);
-    border-left: 2px solid var(--line);
+    color: var(--steel-300);
+    border-left: 2px solid rgba(255, 255, 255, 0.14);
   }
   .mobile-nav__sub a:hover {
     border-color: var(--accent);
-    color: var(--ink-900);
+    color: var(--white);
   }
   .mobile-nav__actions {
     display: grid;
@@ -607,6 +611,7 @@ p {
   }
   :root {
     --header-h: 64px;
+    --logo-h: 48px;
   }
 }
 
@@ -1675,11 +1680,8 @@ a.channel:hover {
   gap: 40px;
   padding: clamp(48px, 6vw, 80px) 0 48px;
 }
-.footer .brand__name {
-  color: var(--white);
-}
-.footer .brand__tag {
-  color: var(--steel-500);
+.footer__logo {
+  height: 88px;
 }
 .footer h3 {
   margin-bottom: 16px;

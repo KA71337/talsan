@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Brend adı",
+    "name": "TalSan",
     "tagline": "Generator, stabilizator və tənzimləyicilər"
   },
   "contact": {
@@ -39,6 +39,6 @@
   "seo": {
     "title": "Generator, stabilizator və tənzimləyici satışı və təmiri",
     "description": "Generator, stabilizator və tənzimləyicilərin satışı, stabilizator və tənzimləyicilərin təmiri, avadanlıq üzrə texniki məsləhət.",
-    "ogImage": "/images/client/stabilizer-04.webp"
+    "ogImage": ""
   }
 }

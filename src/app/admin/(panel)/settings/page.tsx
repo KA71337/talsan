@@ -13,7 +13,7 @@ export default async function SettingsAdminPage() {
       <div className="adm-head">
         <div>
           <h1>Parametrlər</h1>
-          <p>Brend adı, SEO və məlumat anbarı.</p>
+          <p>Brend, SEO və məlumat anbarı.</p>
         </div>
       </div>
       <SettingsForm initial={settings} section="general" />

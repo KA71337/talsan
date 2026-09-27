@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BRAND_PLACEHOLDER } from "@/config/site";
 import { loadCategories, loadProducts, loadServices, loadSettings } from "@/lib/content";
 import { storageInfo } from "@/lib/storage";
 
@@ -14,7 +13,6 @@ export default async function DashboardPage() {
   const c = settings.contact;
 
   const checks = [
-    { ok: settings.brand.name !== BRAND_PLACEHOLDER, text: "Brend adı daxil edilib", href: "/admin/settings" },
     { ok: !!c.phone, text: "Telefon nömrəsi", href: "/admin/contacts" },
     { ok: !!c.whatsapp, text: "WhatsApp nömrəsi (sorğu forması WhatsApp ilə işləyir)", href: "/admin/contacts" },
     { ok: !!c.email, text: "E-poçt (istəyə bağlı)", href: "/admin/contacts" },

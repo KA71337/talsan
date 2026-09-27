@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CatalogView } from "@/components/site/CatalogView";
 import { getCategories, getSettings } from "@/lib/content";
+import { pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -15,12 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = cats.find((x) => x.slug === category);
   if (!c) return {};
   const description = c.description || s.texts.catalogText;
-  return {
-    title: c.name,
-    description,
-    alternates: { canonical: `/catalog/${c.slug}` },
-    openGraph: { title: c.name, description, url: `/catalog/${c.slug}` },
-  };
+  return pageMeta({ title: c.name, description, path: `/catalog/${c.slug}`, settings: s });
 }
 
 export default async function CategoryPage({ params }: Props) {

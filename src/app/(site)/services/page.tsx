@@ -4,22 +4,37 @@ import { Icon } from "@/components/Icon";
 import { SafeImage } from "@/components/SafeImage";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageHead } from "@/components/site/PageHead";
+import { absoluteUrl } from "@/config/site";
 import { getServices, getSettings } from "@/lib/content";
+import { jsonLd } from "@/lib/jsonld";
+import { ORG_ID, pageMeta } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const s = await getSettings();
-  return {
-    title: s.texts.servicesTitle,
-    description: s.texts.servicesText,
-    alternates: { canonical: "/services" },
-    openGraph: { title: s.texts.servicesTitle, description: s.texts.servicesText, url: "/services" },
-  };
+  return pageMeta({ title: s.texts.servicesTitle, description: s.texts.servicesText, path: "/services", settings: s });
 }
 
 export default async function ServicesPage() {
   const [settings, services] = await Promise.all([getSettings(), getServices()]);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: services.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: s.title,
+        ...(s.summary || s.description ? { description: s.summary || s.description } : {}),
+        url: absoluteUrl(`/services#${s.slug}`),
+        ...(s.image ? { image: absoluteUrl(s.image) } : {}),
+        provider: { "@id": ORG_ID },
+      },
+    })),
+  };
   return (
     <>
+      {services.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />}
       <PageHead
         eyebrow="Xidmətlər"
         title={settings.texts.servicesTitle}

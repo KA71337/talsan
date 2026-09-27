@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { jsonLd } from "@/lib/jsonld";
+import { breadcrumbSchema } from "@/lib/seo";
 
 export function PageHead({
   title,
@@ -28,6 +30,8 @@ export function PageHead({
         <h1 className="h1">{title}</h1>
         {lead && <p className="lead">{lead}</p>}
       </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema(all)) }} />
+
     </section>
   );
 }

@@ -31,8 +31,20 @@ const nextConfig: NextConfig = {
     qualities: [75, 85],
     localPatterns: [
       { pathname: "/images/**", search: "" },
+      { pathname: "/brand/**", search: "" },
       { pathname: "/media/**", search: "" },
     ],
+  },
+  // talsanpower.com is the only primary URL; the Vercel production alias permanently redirects to it.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "talsan.vercel.app" }],
+        destination: "https://talsanpower.com/:path*",
+        permanent: true,
+      },
+    ];
   },
   // Local-storage fallback reads JSON from ./data at runtime
   outputFileTracingIncludes: {
@@ -43,6 +55,10 @@ const nextConfig: NextConfig = {
       { source: "/:path*", headers: securityHeaders },
       {
         source: "/admin/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/api/admin/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
     ];

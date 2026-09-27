@@ -1,5 +1,5 @@
 import type { Settings } from "@/lib/types";
-import { BRAND_PLACEHOLDER } from "./site";
+import { BRAND_NAME } from "./site";
 
 /**
  * Fallback settings. The live values are stored in data/settings.json and edited in the admin
@@ -8,7 +8,7 @@ import { BRAND_PLACEHOLDER } from "./site";
  */
 export const DEFAULT_SETTINGS: Settings = {
   brand: {
-    name: BRAND_PLACEHOLDER,
+    name: BRAND_NAME,
     tagline: "Generator, stabilizator və tənzimləyicilər",
   },
   contact: {
@@ -45,6 +45,7 @@ export const DEFAULT_SETTINGS: Settings = {
     title: "Generator, stabilizator və tənzimləyici satışı və təmiri",
     description:
       "Generator, stabilizator və tənzimləyicilərin satışı, stabilizator və tənzimləyicilərin təmiri, avadanlıq üzrə texniki məsləhət.",
-    ogImage: "/images/client/stabilizer-04.webp",
+    // Empty → the branded TalSan Open Graph image (public/brand/talsan-og.png) is used.
+    ogImage: "",
   },
 };

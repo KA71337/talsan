@@ -3,18 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { NAV } from "@/config/site";
+import { BRAND_NAME, NAV } from "@/config/site";
 import { Icon } from "@/components/Icon";
+import { Logo } from "@/components/Logo";
 import type { ServiceIcon } from "@/lib/types";
 
 type Props = {
-  brand: string;
-  tagline: string;
   services: { slug: string; title: string; icon: ServiceIcon }[];
   categories: { slug: string; name: string }[];
 };
 
-export function Header({ brand, tagline, services, categories }: Props) {
+export function Header({ services, categories }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -59,9 +58,8 @@ export function Header({ brand, tagline, services, categories }: Props) {
   return (
     <header ref={ref} className="header" data-open={open} data-scrolled={scrolled}>
       <div className="container header__inner">
-        <Link href="/" className="brand" aria-label={`${brand} — ana səhifə`}>
-          <span className="brand__name">{brand}</span>
-          {tagline && <span className="brand__tag">{tagline}</span>}
+        <Link href="/" className="brand" aria-label={`${BRAND_NAME} — ana səhifə`}>
+          <Logo className="brand__logo" priority sizes="(max-width: 640px) 120px, 160px" />
         </Link>
 
         <nav className="nav" aria-label="Əsas menyu">

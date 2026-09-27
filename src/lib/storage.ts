@@ -75,7 +75,7 @@ function gh() {
   const headers = {
     Authorization: `Bearer ${env("GITHUB_TOKEN")}`,
     "X-GitHub-Api-Version": "2022-11-28",
-    "User-Agent": "site-admin",
+    "User-Agent": "talsan-admin",
   };
   const url = (p: string) =>
     `${base}/repos/${owner}/${repo}/contents/${p.split("/").map(encodeURIComponent).join("/")}`;

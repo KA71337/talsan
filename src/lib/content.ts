@@ -1,13 +1,15 @@
 import "server-only";
 import { cache } from "react";
 import { DEFAULT_SETTINGS } from "@/config/defaults";
+import { BRAND_NAME } from "@/config/site";
 import { readData } from "./storage";
 import type { Category, Product, Service, Settings } from "./types";
 
 function mergeSettings(stored: Partial<Settings> | null): Settings {
   const s = stored ?? {};
   return {
-    brand: { ...DEFAULT_SETTINGS.brand, ...s.brand },
+    // The brand name is fixed ("TalSan"); stored values can't override it.
+    brand: { ...DEFAULT_SETTINGS.brand, ...s.brand, name: BRAND_NAME },
     contact: {
       ...DEFAULT_SETTINGS.contact,
       ...s.contact,

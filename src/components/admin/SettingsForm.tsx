@@ -17,7 +17,7 @@ const IMAGE_FIELDS: Record<Section, { key: ImageKey; label: string }[]> = {
     { key: "repairImage", label: "Təmir bloku şəkli" },
     { key: "aboutImage", label: "Haqqımızda şəkli" },
   ],
-  general: [{ key: "ogImage", label: "Open Graph şəkli (sosial şəbəkələrdə paylaşım)" }],
+  general: [{ key: "ogImage", label: "Open Graph şəkli (boş qalsa — TalSan loqolu standart şəkil)" }],
 };
 
 function getImage(s: Settings, k: ImageKey) {
@@ -186,11 +186,14 @@ export function SettingsForm({ initial, section }: { initial: Settings; section:
           <div className="adm-card form">
             <h2>Brend</h2>
             <p className="adm-alert adm-alert--info">
-              Rəsmi brend adı və loqo hələ təsdiqlənməyib. Ad burada dəyişdirilir və bütün saytda (başlıq, footer, SEO)
-              avtomatik yenilənir.
+              Brend adı — <strong>TalSan</strong>, loqo və əsas domen (talsanpower.com) sabitdir və bütün saytda (başlıq,
+              footer, SEO) avtomatik istifadə olunur.
             </p>
             <div className="form-row">
-              {text("brand", "name", "Brend adı *", { max: 60 })}
+              <label className="field">
+                <span>Brend adı</span>
+                <input className="input" value={s.brand.name} readOnly disabled />
+              </label>
               {text("brand", "tagline", "Qısa şüar / fəaliyyət", { max: 120 })}
             </div>
           </div>
