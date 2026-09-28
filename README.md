@@ -28,10 +28,18 @@ GITHUB_BRANCH=main
 GITHUB_PRODUCTS_PATH=data/products.json
 ADMIN_PASSWORD=          # admin login: username "admin"
 SESSION_SECRET=          # random, at least 32 characters
-NEXT_PUBLIC_SITE_URL=https://talsanpower.com   # optional, production default
+NEXT_PUBLIC_SITE_URL=https://talsanpower.com
+NEXT_PUBLIC_PHONE=+994 50 681 21 25
+NEXT_PUBLIC_WHATSAPP=994506812125
+NEXT_PUBLIC_CONTACT_NAME=TalSan
+NEXT_PUBLIC_CONTACT_HOURS=Açıqdır, bağlanacağı saat - 23:00
+NEXT_PUBLIC_ADDRESS=Lənkəran, Azərbaycan
+NEXT_PUBLIC_TELEGRAM=        # empty channels are hidden
 ```
 
 Optional: `GITHUB_SERVICES_PATH`, `GITHUB_CATEGORIES_PATH`, `GITHUB_SETTINGS_PATH`, `GITHUB_UPLOADS_DIR`.
+
+Public contact variables are non-secret defaults. Values saved through the existing admin settings panel override them; blank core contact values fall back to these defaults.
 
 ## SEO
 

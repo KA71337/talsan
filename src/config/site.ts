@@ -13,8 +13,17 @@ export const OG_IMAGE = { src: "/brand/talsan-og.png", width: 1200, height: 630 
 
 export const CURRENCY = "AZN";
 
-/** Absolute site origin for SEO URLs. Canonicals must never vary by deployment host or environment. */
+/** Absolute site origin for SEO URLs. Env allows override; falls back to PRODUCTION_URL. */
 export function siteUrl(): string {
+  const env = (typeof process !== "undefined" ? process.env.NEXT_PUBLIC_SITE_URL : "")?.trim();
+  if (env) {
+    try {
+      const u = new URL(env);
+      if (u.protocol === "https:" || u.protocol === "http:") return u.origin;
+    } catch {
+      /* ignore malformed env */
+    }
+  }
   return PRODUCTION_URL;
 }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { contextualInquiryMessage } from "@/config/contact";
 import { absoluteUrl, CURRENCY } from "@/config/site";
 import { Icon } from "@/components/Icon";
 import { ProductCard } from "@/components/site/Cards";
@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: Props) {
 
   const category = categories.find((c) => c.id === product.category);
   const price = formatPrice(product.price);
-  const message = `Salam! "${product.title}" barədə məlumat almaq istəyirəm.`;
+  const message = contextualInquiryMessage(product.title);
   const wa = whatsappHref(settings.contact.whatsapp, message);
   const tel = telHref(settings.contact.phone);
   const related = all.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 3);
@@ -122,12 +122,11 @@ export default async function ProductPage({ params }: Props) {
                   <Icon name="phone" /> Zəng et
                 </a>
               )}
-              <Link
-                href={`/contacts?mehsul=${encodeURIComponent(product.slug)}`}
-                className={wa || tel ? "btn btn--ghost btn--block" : "btn btn--accent btn--block"}
-              >
-                Sorğu göndər <Icon name="arrow" />
-              </Link>
+              {wa && (
+                <a href={wa} className="btn btn--ghost btn--block" target="_blank" rel="noopener noreferrer">
+                  Sorğu göndər <Icon name="arrow" />
+                </a>
+              )}
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ProductCard } from "@/components/site/Cards";
 import { PageHead } from "@/components/site/PageHead";
 import { getCategories, getCategoriesWithCounts, getProducts, getSettings } from "@/lib/content";
+import { whatsappHref } from "@/lib/format";
 
 export async function CatalogView({ categorySlug }: { categorySlug?: string }) {
   const [settings, products, categories, withCounts] = await Promise.all([
@@ -13,6 +14,7 @@ export async function CatalogView({ categorySlug }: { categorySlug?: string }) {
   const active = categorySlug ? categories.find((c) => c.slug === categorySlug) : undefined;
   const list = active ? products.filter((p) => p.category === active.id) : products;
   const catById = new Map(categories.map((c) => [c.id, c]));
+  const inquiryHref = whatsappHref(settings.contact.whatsapp);
 
   return (
     <>
@@ -50,9 +52,11 @@ export async function CatalogView({ categorySlug }: { categorySlug?: string }) {
           ) : (
             <div className="empty">
               <p>Bu bölmədə hələ məhsul yoxdur.</p>
-              <Link href="/contacts" className="btn btn--ghost btn--sm">
-                Sorğu göndər
-              </Link>
+              {inquiryHref && (
+                <a href={inquiryHref} className="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer">
+                  Sorğu göndər
+                </a>
+              )}
             </div>
           )}
         </div>

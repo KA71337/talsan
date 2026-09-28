@@ -3,7 +3,9 @@ import { Icon } from "@/components/Icon";
 import { SafeImage } from "@/components/SafeImage";
 import { ProductCard, ServiceCard } from "@/components/site/Cards";
 import { CtaBand } from "@/components/site/CtaBand";
+import { contextualInquiryMessage } from "@/config/contact";
 import { getCategories, getProducts, getServices, getSettings } from "@/lib/content";
+import { whatsappHref } from "@/lib/format";
 
 export default async function HomePage() {
   const [settings, services, products, categories] = await Promise.all([
@@ -16,6 +18,11 @@ export default async function HomePage() {
   const catById = new Map(categories.map((c) => [c.id, c]));
   const featured = products.slice(0, 6);
   const repairService = services.find((s) => s.icon === "repair") ?? services[0];
+  const inquiryHref = whatsappHref(settings.contact.whatsapp);
+  const repairInquiryHref = whatsappHref(
+    settings.contact.whatsapp,
+    contextualInquiryMessage(repairService?.title || "təmir xidməti"),
+  );
 
   return (
     <>
@@ -30,9 +37,11 @@ export default async function HomePage() {
               <Link href="/services" className="btn">
                 Xidmətlərə bax <Icon name="arrow" />
               </Link>
-              <Link href="/contacts" className="btn btn--ghost">
-                Əlaqə saxla
-              </Link>
+              {inquiryHref && (
+                <a href={inquiryHref} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                  Əlaqə saxla
+                </a>
+              )}
             </div>
             {services.length > 0 && (
               <nav className="hero__lines" aria-label="Əsas xidmətlər">
@@ -84,15 +93,17 @@ export default async function HomePage() {
           </div>
           <div className="grid-cards">
             {services.map((s, i) => (
-              <ServiceCard key={s.id} service={s} index={i} />
+              <ServiceCard key={s.id} service={s} index={i} whatsapp={settings.contact.whatsapp} />
             ))}
             <div className="cta-card">
               <span className="eyebrow eyebrow--light">Məsləhət</span>
               <h3 className="h3">Hansı avadanlığın uyğun olduğunu bilmirsiniz?</h3>
               <p>Tələbatınızı yazın — seçimdə köməklik göstərək.</p>
-              <Link href="/contacts" className="btn btn--accent btn--sm">
-                Əlaqə saxla <Icon name="arrow" />
-              </Link>
+              {inquiryHref && (
+                <a href={inquiryHref} className="btn btn--accent btn--sm" target="_blank" rel="noopener noreferrer">
+                  Əlaqə saxla <Icon name="arrow" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -132,12 +143,11 @@ export default async function HomePage() {
                   </div>
                 </li>
               </ol>
-              <Link
-                href={repairService ? `/contacts?xidmet=${repairService.slug}` : "/contacts"}
-                className="btn btn--accent"
-              >
-                Təmir üçün müraciət <Icon name="arrow" />
-              </Link>
+              {repairInquiryHref && (
+                <a href={repairInquiryHref} className="btn btn--accent" target="_blank" rel="noopener noreferrer">
+                  Təmir üçün müraciət <Icon name="arrow" />
+                </a>
+              )}
             </div>
           </div>
         </section>

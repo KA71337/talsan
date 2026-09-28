@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@/components/Icon";
+import { buildWhatsAppUrl } from "@/config/contact";
 
 type Props = {
   whatsapp: string | null; // digits only
@@ -38,18 +39,17 @@ export function ContactForm({ whatsapp, email, services, defaultService = "", de
     if (Object.keys(next).length) return;
 
     const serviceTitle = services.find((s) => s.slug === service)?.title;
-    const lines = [
-      `Salam! Sorğu:`,
+    const text = [
+      "Salam, TalSan saytından sorğu göndərirəm.",
+      "",
       `Ad: ${name}`,
-      phone ? `Telefon: ${phone}` : null,
-      serviceTitle ? `Xidmət: ${serviceTitle}` : null,
-      ``,
-      message.slice(0, 1500),
-    ].filter((l): l is string => l !== null);
-    const text = lines.join("\n");
+      `Telefon: ${phone || "..."}`,
+      `Məhsul/Xidmət: ${serviceTitle || "..."}`,
+      `Mesaj: ${message.slice(0, 1500)}`,
+    ].join("\n");
 
     if (whatsapp) {
-      window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+      window.open(buildWhatsAppUrl(whatsapp, text)!, "_blank", "noopener,noreferrer");
       setStatus("WhatsApp açıldı — mesajı göndərməyi unutmayın.");
     } else if (email) {
       window.location.href = `mailto:${email}?subject=${encodeURIComponent("Saytdan sorğu")}&body=${encodeURIComponent(text)}`;
@@ -97,7 +97,7 @@ export function ContactForm({ whatsapp, email, services, defaultService = "", de
         </label>
       </div>
       <label className="field">
-        <span>Xidmət</span>
+        <span>Məhsul/Xidmət</span>
         <select className="select input" name="service" defaultValue={defaultService}>
           <option value="">Seçin (istəyə bağlı)</option>
           {services.map((s) => (

@@ -1,10 +1,10 @@
 import type { Settings } from "@/lib/types";
+import { PUBLIC_CONTACT } from "./contact";
 import { BRAND_NAME } from "./site";
 
 /**
  * Fallback settings. The live values are stored in data/settings.json and edited in the admin
- * panel. Contact fields are intentionally empty: the client has not provided them yet, and
- * empty channels are simply not rendered on the public site.
+ * panel. Public contact values come from environment variables with audited production fallbacks.
  */
 export const DEFAULT_SETTINGS: Settings = {
   brand: {
@@ -12,12 +12,12 @@ export const DEFAULT_SETTINGS: Settings = {
     tagline: "Generator, stabilizator və tənzimləyicilər",
   },
   contact: {
-    phone: "",
-    whatsapp: "",
+    phone: PUBLIC_CONTACT.phone,
+    whatsapp: PUBLIC_CONTACT.whatsapp,
     email: "",
-    address: "",
-    hours: "",
-    socials: { instagram: "", facebook: "", telegram: "", youtube: "", tiktok: "" },
+    address: PUBLIC_CONTACT.address,
+    hours: PUBLIC_CONTACT.hours,
+    socials: { instagram: "", facebook: "", telegram: PUBLIC_CONTACT.telegram, youtube: "", tiktok: "" },
   },
   texts: {
     heroEyebrow: "Generator · Stabilizator · Tənzimləyici",

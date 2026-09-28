@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { contactChannels } from "@/lib/format";
 import type { Settings } from "@/lib/types";
@@ -25,9 +24,6 @@ export function CtaBand({ settings }: { settings: Settings }) {
                 <Icon name="phone" /> Zəng et
               </a>
             )}
-            <Link href="/contacts" className={wa || tel ? "btn btn--ghost" : "btn btn--accent"}>
-              Sorğu göndər <Icon name="arrow" />
-            </Link>
           </div>
         </div>
       </div>

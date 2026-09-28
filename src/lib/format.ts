@@ -1,3 +1,4 @@
+import { buildWhatsAppUrl, digitsOnly } from "@/config/contact";
 import { CURRENCY } from "@/config/site";
 import type { Settings } from "./types";
 
@@ -7,7 +8,7 @@ export function formatPrice(price: number | null): string | null {
   return `${n} ${CURRENCY}`;
 }
 
-export const digits = (v: string) => v.replace(/\D+/g, "");
+export const digits = digitsOnly;
 
 export function telHref(phone: string): string | null {
   const d = digits(phone);
@@ -15,11 +16,7 @@ export function telHref(phone: string): string | null {
   return `tel:${phone.trim().startsWith("+") ? "+" : ""}${d}`;
 }
 
-export function whatsappHref(whatsapp: string, text?: string): string | null {
-  const d = digits(whatsapp);
-  if (d.length < 8) return null;
-  return `https://wa.me/${d}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
-}
+export const whatsappHref = buildWhatsAppUrl;
 
 export function contactChannels(s: Settings) {
   const c = s.contact;

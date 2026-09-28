@@ -11,9 +11,10 @@ import type { ServiceIcon } from "@/lib/types";
 type Props = {
   services: { slug: string; title: string; icon: ServiceIcon }[];
   categories: { slug: string; name: string }[];
+  inquiryHref: string;
 };
 
-export function Header({ services, categories }: Props) {
+export function Header({ services, categories, inquiryHref }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -96,9 +97,9 @@ export function Header({ services, categories }: Props) {
           })}
         </nav>
 
-        <Link href="/contacts" className="btn btn--accent btn--sm header__cta">
+        <a href={inquiryHref} className="btn btn--accent btn--sm header__cta" target="_blank" rel="noopener noreferrer">
           Əlaqə saxla
-        </Link>
+        </a>
 
         <button
           type="button"
@@ -142,9 +143,15 @@ export function Header({ services, categories }: Props) {
           );
         })}
         <div className="mobile-nav__actions">
-          <Link href="/contacts" className="btn btn--accent btn--block" onClick={() => setOpen(false)}>
+          <a
+            href={inquiryHref}
+            className="btn btn--accent btn--block"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+          >
             Əlaqə saxla
-          </Link>
+          </a>
         </div>
       </div>
     </header>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SafeImage } from "@/components/SafeImage";
 import { CtaBand } from "@/components/site/CtaBand";
 import { PageHead } from "@/components/site/PageHead";
+import { contextualInquiryMessage } from "@/config/contact";
 import { absoluteUrl } from "@/config/site";
 import { getServices, getSettings } from "@/lib/content";
+import { whatsappHref } from "@/lib/format";
 import { jsonLd } from "@/lib/jsonld";
 import { ORG_ID, pageMeta } from "@/lib/seo";
 
@@ -59,9 +60,16 @@ export default async function ServicesPage() {
                 <h2 className="h2">{s.title}</h2>
                 {s.summary && <p className="lead">{s.summary}</p>}
                 {s.description && <p className="prose">{s.description}</p>}
-                <Link href={`/contacts?xidmet=${s.slug}`} className="btn btn--accent">
-                  Sorğu göndər <Icon name="arrow" />
-                </Link>
+                {whatsappHref(settings.contact.whatsapp, contextualInquiryMessage(s.title)) && (
+                  <a
+                    href={whatsappHref(settings.contact.whatsapp, contextualInquiryMessage(s.title))!}
+                    className="btn btn--accent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sorğu göndər <Icon name="arrow" />
+                  </a>
+                )}
               </div>
             </article>
           ))}

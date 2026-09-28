@@ -5,15 +5,26 @@ import { BRAND_NAME } from "@/config/site";
 import { readData } from "./storage";
 import type { Category, Product, Service, Settings } from "./types";
 
+const populated = (value: string | undefined, fallback: string) => value?.trim() || fallback;
+
 function mergeSettings(stored: Partial<Settings> | null): Settings {
   const s = stored ?? {};
+  const storedContact = s.contact;
   return {
     // The brand name is fixed ("TalSan"); stored values can't override it.
     brand: { ...DEFAULT_SETTINGS.brand, ...s.brand, name: BRAND_NAME },
     contact: {
       ...DEFAULT_SETTINGS.contact,
-      ...s.contact,
-      socials: { ...DEFAULT_SETTINGS.contact.socials, ...s.contact?.socials },
+      ...storedContact,
+      phone: populated(storedContact?.phone, DEFAULT_SETTINGS.contact.phone),
+      whatsapp: populated(storedContact?.whatsapp, DEFAULT_SETTINGS.contact.whatsapp),
+      address: populated(storedContact?.address, DEFAULT_SETTINGS.contact.address),
+      hours: populated(storedContact?.hours, DEFAULT_SETTINGS.contact.hours),
+      socials: {
+        ...DEFAULT_SETTINGS.contact.socials,
+        ...storedContact?.socials,
+        telegram: populated(storedContact?.socials?.telegram, DEFAULT_SETTINGS.contact.socials.telegram),
+      },
     },
     texts: { ...DEFAULT_SETTINGS.texts, ...s.texts },
     seo: { ...DEFAULT_SETTINGS.seo, ...s.seo },

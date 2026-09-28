@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { SafeImage } from "@/components/SafeImage";
-import { formatPrice } from "@/lib/format";
+import { contextualInquiryMessage } from "@/config/contact";
+import { formatPrice, whatsappHref } from "@/lib/format";
 import type { Category, Product, Service } from "@/lib/types";
 
-export function ServiceCard({ service, index }: { service: Service; index: number }) {
+export function ServiceCard({ service, index, whatsapp }: { service: Service; index: number; whatsapp: string }) {
+  const inquiryHref = whatsappHref(whatsapp, contextualInquiryMessage(service.title));
   return (
     <article className="service-card">
       <div className="service-card__top">
@@ -16,9 +18,11 @@ export function ServiceCard({ service, index }: { service: Service; index: numbe
       <h3 className="h3">{service.title}</h3>
       {service.summary && <p>{service.summary}</p>}
       <div className="service-card__actions">
-        <Link href={`/contacts?xidmet=${service.slug}`} className="link-arrow">
-          Sorğu göndər <Icon name="arrow" />
-        </Link>
+        {inquiryHref && (
+          <a href={inquiryHref} className="link-arrow" target="_blank" rel="noopener noreferrer">
+            Sorğu göndər <Icon name="arrow" />
+          </a>
+        )}
         <Link href={`/services#${service.slug}`} className="link-muted">
           Ətraflı
         </Link>

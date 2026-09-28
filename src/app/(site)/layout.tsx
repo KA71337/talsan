@@ -5,6 +5,7 @@ import { Header } from "@/components/site/Header";
 import { RevealObserver } from "@/components/site/RevealObserver";
 import { TopBar } from "@/components/site/TopBar";
 import { getCategoriesWithCounts, getServices, getSettings } from "@/lib/content";
+import { whatsappHref } from "@/lib/format";
 import { jsonLd } from "@/lib/jsonld";
 import { pageMeta, siteSchema } from "@/lib/seo";
 
@@ -29,6 +30,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <Header
         services={services.map((s) => ({ slug: s.slug, title: s.title, icon: s.icon }))}
         categories={categories.map((c) => ({ slug: c.slug, name: c.name }))}
+        inquiryHref={whatsappHref(settings.contact.whatsapp) ?? "/contacts"}
       />
       <main id="main">{children}</main>
       <Footer settings={settings} services={services} />

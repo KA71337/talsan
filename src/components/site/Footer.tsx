@@ -73,9 +73,11 @@ export function Footer({ settings, services }: { settings: Settings; services: S
             )}
             {c.address && <li>{c.address}</li>}
             {c.hours && <li>{c.hours}</li>}
-            <li>
-              <Link href="/contacts">Sorğu göndər →</Link>
-            </li>
+            {wa && (
+              <li>
+                <a href={wa} target="_blank" rel="noopener noreferrer">Sorğu göndər →</a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
