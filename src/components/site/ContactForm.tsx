@@ -68,9 +68,14 @@ export function ContactForm({ whatsapp, email, services, defaultService = "", de
             autoComplete="name"
             maxLength={80}
             aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "contact-name-error" : undefined}
             required
           />
-          {errors.name && <span className="field-error">{errors.name}</span>}
+          {errors.name && (
+            <span id="contact-name-error" className="field-error" role="alert">
+              {errors.name}
+            </span>
+          )}
         </label>
         <label className="field">
           <span>Telefon</span>
@@ -82,8 +87,13 @@ export function ContactForm({ whatsapp, email, services, defaultService = "", de
             autoComplete="tel"
             maxLength={20}
             aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? "contact-phone-error" : undefined}
           />
-          {errors.phone && <span className="field-error">{errors.phone}</span>}
+          {errors.phone && (
+            <span id="contact-phone-error" className="field-error" role="alert">
+              {errors.phone}
+            </span>
+          )}
         </label>
       </div>
       <label className="field">
@@ -106,9 +116,14 @@ export function ContactForm({ whatsapp, email, services, defaultService = "", de
           defaultValue={defaultMessage}
           placeholder="Avadanlıq, model, nasazlıq və ya sualınız…"
           aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "contact-message-error" : undefined}
           required
         />
-        {errors.message && <span className="field-error">{errors.message}</span>}
+        {errors.message && (
+          <span id="contact-message-error" className="field-error" role="alert">
+            {errors.message}
+          </span>
+        )}
       </label>
       <button className="btn btn--accent" type="submit" disabled={!available}>
         {whatsapp ? <Icon name="whatsapp" /> : <Icon name="mail" />}

@@ -13,15 +13,9 @@ export const OG_IMAGE = { src: "/brand/talsan-og.png", width: 1200, height: 630 
 
 export const CURRENCY = "AZN";
 
-/**
- * Absolute site origin for SEO URLs.
- * NEXT_PUBLIC_SITE_URL can override it (e.g. http://localhost:3000 for local testing);
- * otherwise the production domain is used. The *.vercel.app URL is never used as SEO URL.
- */
+/** Absolute site origin for SEO URLs. Canonicals must never vary by deployment host or environment. */
 export function siteUrl(): string {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (explicit) return explicit.replace(/\/+$/, "");
-  return process.env.NODE_ENV === "development" ? "http://localhost:3000" : PRODUCTION_URL;
+  return PRODUCTION_URL;
 }
 
 export const absoluteUrl = (path: string) => `${siteUrl()}${path === "/" ? "" : path}`;
