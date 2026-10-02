@@ -111,20 +111,5 @@
     "status": "active",
     "createdAt": "2026-09-24T00:00:00.000Z",
     "updatedAt": "2026-09-24T00:00:00.000Z"
-  },
-  {
-    "id": "p-stab-03",
-    "slug": "stabilizator-03",
-    "title": "Stabilizator · 03",
-    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
-    "price": null,
-    "category": "c-stabilizers",
-    "images": [
-      "/images/client/stabilizer-06.webp"
-    ],
-    "stock": null,
-    "status": "active",
-    "createdAt": "2026-09-24T00:00:00.000Z",
-    "updatedAt": "2026-09-24T00:00:00.000Z"
   }
 ]
