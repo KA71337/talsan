@@ -1,5 +1,21 @@
 [
   {
+    "id": "p-murhzwkg6m6c4s5w6r6b",
+    "slug": "talsan-power-30-kva-nol-faza-tenzimleyici",
+    "title": "TalSan Power 30 kva nol faza tənzimləyici",
+    "description": "Yeni ,,TalSan Power'' stablizatorları. 30 kva nol faza. Mehsulda hem soyutma hem de qoruma sistemi movcuddur.",
+    "price": null,
+    "category": "c-stabilizers",
+    "images": [
+      "/media/uploads/murhzt93-1d0b061560caf359.webp",
+      "/media/uploads/murhzv1u-8260da20295e295b.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:51:35.489Z",
+    "updatedAt": "2026-10-02T21:51:35.489Z"
+  },
+  {
     "id": "p-murhxt1r6n0s1h634d42",
     "slug": "talsan-power-40-kva-nol-faza-tenzimleyici",
     "title": "TalSan Power 40 kva nol faza tənzimləyici",
