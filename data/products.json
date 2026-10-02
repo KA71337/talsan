@@ -1,5 +1,24 @@
 [
   {
+    "id": "p-murhax3j27596y2p5i6k",
+    "slug": "aksa-apd70-ikinci-el",
+    "title": "Aksa apd70 (ikinci əl)",
+    "description": "Aksa dizel generator 3 faza 70 kva. Cəmi 340 moto saat işləyib. İdeal veziyyetde. Mühərrik 4 silindir apd. Generator 3 fazadir, uc eded nol faza cixisi var. avtomatikdir. isiqlar söndukde generator avtomatik işə düşür isiqlar berpa olduqda generator avtomatik sonur. Yag antifreez filtirler yenilenib. Bağlı kabin izolasiya edilib.",
+    "price": 11500,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murhanbw-cfe0b075390053dd.webp",
+      "/media/uploads/murhap18-347732c00bd9d07b.webp",
+      "/media/uploads/murhaqt5-787da46a4cd126d4.webp",
+      "/media/uploads/murhaskm-1f2fd1c6cf60468c.webp",
+      "/media/uploads/murhauf4-47a691d3e2bb07a7.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:32:09.728Z",
+    "updatedAt": "2026-10-02T21:32:09.728Z"
+  },
+  {
     "id": "p-murh8lcd1x1t5d6s4a66",
     "slug": "honda-gx610-ikinci-el",
     "title": "Honda gx610 (ikinci əl)",
