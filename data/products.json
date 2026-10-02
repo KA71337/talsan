@@ -1,5 +1,22 @@
 [
   {
+    "id": "p-murgxqj616361k5d5i3x",
+    "slug": "perkins-15-kva-3-faza-ikinci-el",
+    "title": "Perkins 15 kva 3 faza(ikinci əl)",
+    "description": "perkins (ingiltərə) dizel generator 3 faza 15 kva. Mühərrik 3 silindir 13.5 kilovat gücündə. Generator 3 fazadir, uc eded nol faza cixisi var. avtomatikdir. isiqlar söndukde generator avtomatik işə düşür isiqlar berpa olduqda generator avtomatik sonur. Yag antifreez filtirler yenilenib",
+    "price": 5000,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murgxjl0-80a44121c6eab7ed.webp",
+      "/media/uploads/murgxltg-0ed249ce6302056d.webp",
+      "/media/uploads/murgxo32-51f437872624083a.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:21:54.688Z",
+    "updatedAt": "2026-10-02T21:21:54.688Z"
+  },
+  {
     "id": "p-murgua6m6u3r022n2p3p",
     "slug": "gold-moto-10-kva-3-faza",
     "title": "Gold Moto 10 kva 3 faza",
