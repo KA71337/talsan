@@ -1,5 +1,21 @@
 [
   {
+    "id": "p-murgua6m6u3r022n2p3p",
+    "slug": "gold-moto-10-kva-3-faza",
+    "title": "Gold Moto 10 kva 3 faza",
+    "description": "10 kva 3 faza yeni benzin generator. Generatorun 3 eded 3.3 kva gucunde nol faza cixisi var. Generatorlar dasinmasi rahat olsun deye 4 eded teker uzerindedir.",
+    "price": 1400,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murgu6hx-af007f71640b3988.webp",
+      "/media/uploads/murgu8kq-2e561aeb5aa128a6.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:19:13.535Z",
+    "updatedAt": "2026-10-02T21:19:13.535Z"
+  },
+  {
     "id": "p-murgqgbl4c434q0g0d54",
     "slug": "talsan-power-12000-se",
     "title": "TalSan Power 12000 SE",
