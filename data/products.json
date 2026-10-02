@@ -1,5 +1,22 @@
 [
   {
+    "id": "p-murhrcph6v671d6c2a72",
+    "slug": "sdmo-15-kva-nol-faza-ikinci-el",
+    "title": "SDMO 15 kva nol faza (ikinci əl)",
+    "description": "15 kva nol faza orjinal mitsubishi (yapon) mühərriki ilə SDMO generator. Generator servis olunub. avtomatikdir. isiqlar söndukde generator avtomatik işə düşür isiqlar berpa olduqda generator avtomatik sonur. Yag antifreez filtirler yenilenib. Soyutma sistemi antifrez. Mühərrik 3 silindirlidir.",
+    "price": 4900,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murhr731-09155f2dc4cc1071.webp",
+      "/media/uploads/murhr93z-270733437ed0269c.webp",
+      "/media/uploads/murhrbbs-28e1f7ba4e7e9bf5.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:44:56.484Z",
+    "updatedAt": "2026-10-02T21:44:56.484Z"
+  },
+  {
     "id": "p-murhohnx693j57083m5b",
     "slug": "gucbir-17-kva-ikinci-el",
     "title": "Gucbir 17 kva (ikinci əl)",
