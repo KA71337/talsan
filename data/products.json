@@ -1,5 +1,23 @@
 [
   {
+    "id": "p-murhm9po374x156v4w4j",
+    "slug": "talsan-power-12000-se-2",
+    "title": "TalSan Power 12000 SE",
+    "description": "TalSan Power 12000SE “Super Silent” dizel generator. generator avtomatikdir. avtomatika sistemi datacom 105 kart vasitəsi ilə idarə olunur.\n- Gərginlik: 220V, 1 faza\n- Tezlik: 50 Hz\n- Güc: nominal 10 kVA, maksimal 11 kVA\n- Nominal cərəyan: 45.5 A, maksimal 50 A\n- Güc əmsalı: 1.0\n- Qorunma dərəcəsi: IP52\n- Səsiz işləmə üçün səsizləşdirilmiş (Super Silent) korpus\n- Avtomatik gərginlik tənzimləyicisi (AVR)\n- ATS üçün hazır interfeys (avtomatik start üçün uyğun)\n- Aşırı yüklənmədən və aşağı yağ səviyyəsindən qorunma\n- Ön paneldə göstərici ekranı, açar və idarəetmə elementləri",
+    "price": 4000,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murhm3ol-fa16c8905809ed7c.webp",
+      "/media/uploads/murhm55e-0799126c119e52e1.webp",
+      "/media/uploads/murhm6jy-920d95b2d12ffae4.webp",
+      "/media/uploads/murhm84p-9bbe86fadc044a6d.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:40:59.307Z",
+    "updatedAt": "2026-10-02T21:40:59.307Z"
+  },
+  {
     "id": "p-murhkkrn1b4s5a2h5421",
     "slug": "talsan-power-15-kva-nol-faza-2",
     "title": "TalSan Power 15 kva nol faza",
