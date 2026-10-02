@@ -1,5 +1,24 @@
 [
   {
+    "id": "p-murggpo6471x4g0i3421",
+    "slug": "talsan-power-1000-xe",
+    "title": "TalSan Power 1000 XE",
+    "description": "⚡ TALSAN POWER 10000XE —Nol faza 9 kva gücündə. mühərrik 192f dizel. Yenidir akumliyatorla(açarla) işə düşür.\nTalsan Power 10000XE dizel generatoru ev, obyekt, mağaza, kənd təsərrüfatı və müxtəlif iş sahələri üçün etibarlı enerji mənbəyidir.\n✅ Güclü dizel mühərrik\n✅ Hava ilə soyutma sistemi\n✅ 50 Hz — stabil elektrik təminatı\n✅ 220V çıxışlar\n✅ Elektrik startı\n✅ Möhkəm metal konstruksiya\n✅ Talsan Power keyfiyyəti\n✅ Rahat daşınması üçün təkərlər\n- Sertifikatlar: CE, RoHS, ISO 9000-2018",
+    "price": 1900,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murggg7t-b437e35cf5bdafd9.webp",
+      "/media/uploads/murggi7t-57f4ed589f68496c.webp",
+      "/media/uploads/murggjux-b3bfec2c1e5ca5c8.webp",
+      "/media/uploads/murgglnk-26413b5c8cb41408.webp",
+      "/media/uploads/murggnvl-d36d6843c37735cd.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:08:40.446Z",
+    "updatedAt": "2026-10-02T21:08:40.446Z"
+  },
+  {
     "id": "p-murgeuli4t2u0w212b3w",
     "slug": "talsan-power-44-kva-weichai",
     "title": "TalSan Power 44 kva Weichai",
