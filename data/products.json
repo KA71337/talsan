@@ -36,20 +36,5 @@
     "status": "active",
     "createdAt": "2026-10-02T20:57:53.369Z",
     "updatedAt": "2026-10-02T20:59:28.427Z"
-  },
-  {
-    "id": "p-gen-06",
-    "slug": "generator-06",
-    "title": "Generator · 06",
-    "description": "Texniki göstəricilər, mövcudluq və qiymət barədə məlumat üçün bizimlə əlaqə saxlayın.",
-    "price": null,
-    "category": "c-generators",
-    "images": [
-      "/images/client/generator-06.webp"
-    ],
-    "stock": null,
-    "status": "active",
-    "createdAt": "2026-09-24T00:00:00.000Z",
-    "updatedAt": "2026-09-24T00:00:00.000Z"
   }
 ]
