@@ -1,5 +1,24 @@
 [
   {
+    "id": "p-murhjk826p3p1a380d0z",
+    "slug": "talsan-power-15-kva-nol-faza",
+    "title": "TalSan Power 15 kva nol faza",
+    "description": "TalSan Power 15 kva dizel generatoru. Mühərrik yangdon 4 silindir mühərrik. Generator 15 kva nol fazadır. 3 faza deyil. Soyutma sistemində ən keyfiyyətli radiatordan istifadə olunub. 3 qat Rəngdən istifadə olunub. Generator kabini qalın materialdan hazırlanıb.  Səssiz və möhkəmdir. Standart mallardan tam fərqlidir. Səs səviyyəsini azaldılıb. Respublika daxili catdirilma xidmeti ve qurasdirilma xidmeti var. 1 il zemanet verilir.\nTalSan Power dizel generator – 15 kVA\n- Yanacaq növü: Dizel\n- Mühərrik: yangdon dizel mühərriki\n- İdarəetmə paneli: SmartGen genset controller – LCD ekran, avariya siqnalları, start/stop düymələri, göstəricilər\n- Səssız/kapotlu korpus: səsizləşdirilmiş, polad gövdə, kilidlənən qapılar, servis üçün geniş açılan panellər\n- Soyutma və havalandırma: qapaqlı hava kanalları, qoruyucu tor barmaqlıqlar\n- Yanacaq və yağ filtrləri: daxilidir, asan çıxarılan servis modulları\n- Açarla işə salma imkanı\n- Şassi: dayanıqlı, vibrasiyaəleyhinə bəndləmə",
+    "price": 8500,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murhjc2z-df02a579da27cfaf.webp",
+      "/media/uploads/murhjdr0-628263b57c9638ee.webp",
+      "/media/uploads/murhjfel-17396c2d96c1e857.webp",
+      "/media/uploads/murhjgun-b29b734f1bae74a6.webp",
+      "/media/uploads/murhji87-00f27110af9f1678.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:38:52.984Z",
+    "updatedAt": "2026-10-02T21:38:52.984Z"
+  },
+  {
     "id": "p-murhhhni6c0r700e6r0x",
     "slug": "talsan-power-10000-xe-3d",
     "title": "TalSan Power 10000 XE 3D",
