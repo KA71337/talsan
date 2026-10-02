@@ -1,5 +1,24 @@
 [
   {
+    "id": "p-murhohnx693j57083m5b",
+    "slug": "gucbir-17-kva-ikinci-el",
+    "title": "Gucbir 17 kva (ikinci əl)",
+    "description": "Gucbir dizel generator 3 faza 17 kva. Mühərrik 4 silindir yangdon. Generator 3 fazadir, uc eded nol faza cixisi var. avtomatikdir. isiqlar söndukde generator avtomatik işə düşür isiqlar berpa olduqda generator avtomatik sonur. Yag antifreez filtirler yenilenib. Bağlı kabin izolasiya edilib.",
+    "price": 5800,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murho8vm-a77a35155f2842ab.webp",
+      "/media/uploads/murhoawy-f3824aeeb2ab8dd1.webp",
+      "/media/uploads/murhoci3-daa6d66bf67a5783.webp",
+      "/media/uploads/murhoe7q-9e409a3973f77c38.webp",
+      "/media/uploads/murhofvw-a07264b95b3429c0.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:42:42.934Z",
+    "updatedAt": "2026-10-02T21:42:42.934Z"
+  },
+  {
     "id": "p-murhm9po374x156v4w4j",
     "slug": "talsan-power-12000-se-2",
     "title": "TalSan Power 12000 SE",
