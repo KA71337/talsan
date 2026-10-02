@@ -1,5 +1,21 @@
 [
   {
+    "id": "p-murhv25971405h70703b",
+    "slug": "talsan-power-50-kva-nol-faza-tenzimleyici",
+    "title": "Talsan Power 50 kva nol faza tənzimləyici",
+    "description": "Yeni ,,TalSan Power'' stablizatorları. 50 kva nol faza. Mehsulda hem soyutma hem de qoruma sistemi movcuddur.",
+    "price": null,
+    "category": "c-stabilizers",
+    "images": [
+      "/media/uploads/murhuyl0-54f827d425658aa4.webp",
+      "/media/uploads/murhv0ts-bd3a93e3f2229409.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:47:49.438Z",
+    "updatedAt": "2026-10-02T21:47:49.438Z"
+  },
+  {
     "id": "p-murhrcph6v671d6c2a72",
     "slug": "sdmo-15-kva-nol-faza-ikinci-el",
     "title": "SDMO 15 kva nol faza (ikinci əl)",
