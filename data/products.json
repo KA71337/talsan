@@ -1,5 +1,21 @@
 [
   {
+    "id": "p-murh8lcd1x1t5d6s4a66",
+    "slug": "honda-gx610-ikinci-el",
+    "title": "Honda gx610 (ikinci əl)",
+    "description": "Honda gx610. generator 12 kva nol fazadir benzindir. starterlə işə düşür.  Problemsizdir yaq filterler deyisilib. Mator v sekilli 2 silindir.",
+    "price": 2200,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murh8ha0-b4e1eed498ae6d45.webp",
+      "/media/uploads/murh8j28-4c9e8456b0bf4c69.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:30:21.206Z",
+    "updatedAt": "2026-10-02T21:30:21.206Z"
+  },
+  {
     "id": "p-murgxqj616361k5d5i3x",
     "slug": "perkins-15-kva-3-faza-ikinci-el",
     "title": "Perkins 15 kva 3 faza(ikinci əl)",
