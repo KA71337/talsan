@@ -1,5 +1,26 @@
 [
   {
+    "id": "p-murhdqb646221b2k5y39",
+    "slug": "genpower-15-kva-ikinci-el",
+    "title": "Genpower 15 kva (ikinci əl)",
+    "description": "Genpover perkins (ingiltərə) dizel generator 3 faza 15 kva. Mühərrik 3 silindir 13.5 kilavat gücündə. Generator 3 fazadir, uc eded nol faza cixisi var. avtomatikdir. isiqlar söndukde generator avtomatik işə düşür isiqlar berpa olduqda generator avtomatik sonur. Yag antifreez filtirler yenilenib. Bağlı kabin izolasiya edilib.",
+    "price": 5800,
+    "category": "c-generators",
+    "images": [
+      "/media/uploads/murhdcpc-730641497f27efd7.webp",
+      "/media/uploads/murhdekf-e80a233998173e70.webp",
+      "/media/uploads/murhdgra-9f16ff54d8fcf9bd.webp",
+      "/media/uploads/murhdis4-3d361618b73e9fc1.webp",
+      "/media/uploads/murhdku0-c4125c4cb8894c1f.webp",
+      "/media/uploads/murhdmlu-6b047979cd68e63c.webp",
+      "/media/uploads/murhdoek-80ec1760b32a863d.webp"
+    ],
+    "stock": null,
+    "status": "active",
+    "createdAt": "2026-10-02T21:34:20.939Z",
+    "updatedAt": "2026-10-02T21:34:20.939Z"
+  },
+  {
     "id": "p-murhax3j27596y2p5i6k",
     "slug": "aksa-apd70-ikinci-el",
     "title": "Aksa apd70 (ikinci əl)",
